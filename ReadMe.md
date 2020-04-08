@@ -1,5 +1,7 @@
 # CircleCI Unity3d playground
 
+[![CircleCI](https://circleci.com/gh/GabLeRoux/circleci-unity3d-playground.svg?style=svg)](https://circleci.com/gh/GabLeRoux/circleci-unity3d-playground)
+
 This is just a quick way for me to get a container running quickly with a desired big docker image so I can verify things.
 
 ## Why CircleCI?
