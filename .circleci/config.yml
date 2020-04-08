@@ -13,4 +13,4 @@ jobs:
             echo 'hello world'
       - run:
           name: Check java version
-          command: java --version
+          command: java -version
