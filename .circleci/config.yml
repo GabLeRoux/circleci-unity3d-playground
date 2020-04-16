@@ -10,6 +10,6 @@ jobs:
       - run:
           command: java -version
       - run:
-          command: sdkmanager --version
+          command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --version
       - run:
-          command: sdkmanager --list
+          command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --list
