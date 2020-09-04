@@ -4,10 +4,11 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: gableroux/unity3d:2020.1.0b9
+      - image: docker:dind
     steps:
       - checkout
       - run:
-          command: which git
-      - run:
-          command: git --version
+          command: |
+            wget https://raw.githubusercontent.com/Unity-CI/docker-linux/master/Dockerfile
+            docker build . -t unity-ci/docker-linux
+
