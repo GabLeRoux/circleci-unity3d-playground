@@ -12,5 +12,5 @@ jobs:
       - run:
           command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --list
       - run:
-          command: command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --version
+          command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --version
 
