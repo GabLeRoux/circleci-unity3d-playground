@@ -1,27 +1,28 @@
+version: 2
+
 aliases:
   - &inspect_android
     steps:
       - checkout
       - ./inspect_android_image.sh
 
-version: 2
-  jobs:
-    job_1:
-      docker:
-          - image: gableroux/unity3d@sha256:77f880130f410a4dc0397260eced7c8ea3f657771c7a64de020004bc33b1beaa
-      <<: *inspect_android
-    job_2:
-      docker:
-        - image: gableroux/unity3d@sha256:02c9488c23edcd3453a731ac9ef0ce53226daeab80870a54f5163192742b8e7c
-      <<: *inspect_android
-    job_3:
-      docker:
-        - image: gableroux/unity3d@sha256:8dd3b2433c0cca9f911df431b8fe39926d26ba5aeece5c2d5b2157b0d31a7e18
-      <<: *inspect_android
-    job_4:
-      docker:
-        - image: gableroux/unity3d@sha256:2d989fb478fe3b87086e31b723791ec94d034322b70ce516187cacfa0e11a913
-      <<: *inspect_android
+jobs:
+  job_1:
+    docker:
+        - image: gableroux/unity3d@sha256:77f880130f410a4dc0397260eced7c8ea3f657771c7a64de020004bc33b1beaa
+    <<: *inspect_android
+  job_2:
+    docker:
+      - image: gableroux/unity3d@sha256:02c9488c23edcd3453a731ac9ef0ce53226daeab80870a54f5163192742b8e7c
+    <<: *inspect_android
+  job_3:
+    docker:
+      - image: gableroux/unity3d@sha256:8dd3b2433c0cca9f911df431b8fe39926d26ba5aeece5c2d5b2157b0d31a7e18
+    <<: *inspect_android
+  job_4:
+    docker:
+      - image: gableroux/unity3d@sha256:2d989fb478fe3b87086e31b723791ec94d034322b70ce516187cacfa0e11a913
+    <<: *inspect_android
 
 workflows:
   version: 2
