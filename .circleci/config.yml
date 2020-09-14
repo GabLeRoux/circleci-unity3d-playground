@@ -4,7 +4,7 @@ aliases:
   - &inspect_android
     steps:
       - checkout
-      - ./inspect_android_image.sh
+      - command: ./inspect_android_image.sh
 
 jobs:
   job_1:
