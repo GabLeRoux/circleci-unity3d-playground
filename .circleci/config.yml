@@ -1,35 +1,33 @@
+aliases:
+  - &inspect_android
+    steps:
+      - checkout
+      - ./inspect_android_image.sh
+
 version: 2
   jobs:
     job_1:
       docker:
           - image: gableroux/unity3d@sha256:77f880130f410a4dc0397260eced7c8ea3f657771c7a64de020004bc33b1beaa
-      steps:
-        - checkout
-        - ./inspect_android_image.sh
+      <<: *inspect_android
     job_2:
       docker:
         - image: gableroux/unity3d@sha256:02c9488c23edcd3453a731ac9ef0ce53226daeab80870a54f5163192742b8e7c
-      steps:
-        - checkout
-        - ./inspect_android_image.sh
+      <<: *inspect_android
     job_3:
       docker:
         - image: gableroux/unity3d@sha256:8dd3b2433c0cca9f911df431b8fe39926d26ba5aeece5c2d5b2157b0d31a7e18
-      steps:
-        - checkout
-        - ./inspect_android_image.sh
+      <<: *inspect_android
     job_4:
       docker:
         - image: gableroux/unity3d@sha256:2d989fb478fe3b87086e31b723791ec94d034322b70ce516187cacfa0e11a913
-      steps:
-        - checkout
-        - ./inspect_android_image.sh
+      <<: *inspect_android
 
-  workflows:
-    version: 2
-    build:
-      jobs:
-        - job_1
-        - job_2
-        - job_3
-        - job_4
+workflows:
+  version: 2
+  build:
+    jobs:
+      - job_1
+      - job_2
+      - job_3
+      - job_4
