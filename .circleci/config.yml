@@ -9,7 +9,7 @@ aliases:
 jobs:
   job_1:
     docker:
-        - image: gableroux/unity3d@sha256:77f880130f410a4dc0397260eced7c8ea3f657771c7a64de020004bc33b1beaa
+      - image: gableroux/unity3d@sha256:77f880130f410a4dc0397260eced7c8ea3f657771c7a64de020004bc33b1beaa
     <<: *inspect_android
   job_2:
     docker:
