@@ -4,10 +4,13 @@ version: 2.0
 jobs:
   build:
     docker:
-      - image: gableroux/unity3d:2020.1.0b9
+      - image: gableroux/unity3d:2019.2.21f1-android
     steps:
       - checkout
       - run:
-          command: which git
-      - run:
           command: git --version
+      - run:
+          command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --list
+      - run:
+          command: command: /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --version
+
