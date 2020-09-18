@@ -10,19 +10,15 @@ aliases:
 jobs:
   job_1:
     docker:
-      - image: gableroux/unity3d@sha256:77f880130f410a4dc0397260eced7c8ea3f657771c7a64de020004bc33b1beaa
+      - image: gableroux/unity3d@sha256:efe8e1ebdc9490674c96685bab17f3c46a65f1f06ed38826c306f3218cae2d51
     <<: *inspect_android
   job_2:
     docker:
-      - image: gableroux/unity3d@sha256:02c9488c23edcd3453a731ac9ef0ce53226daeab80870a54f5163192742b8e7c
+      - image: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
     <<: *inspect_android
   job_3:
     docker:
-      - image: gableroux/unity3d@sha256:8dd3b2433c0cca9f911df431b8fe39926d26ba5aeece5c2d5b2157b0d31a7e18
-    <<: *inspect_android
-  job_4:
-    docker:
-      - image: gableroux/unity3d@sha256:2d989fb478fe3b87086e31b723791ec94d034322b70ce516187cacfa0e11a913
+      - image: gableroux/unity3d@sha256:6ea4426db208054618c936c1cf0e1da43cf3c612069a2c413a74a33db1a4269b
     <<: *inspect_android
 
 workflows:
@@ -32,4 +28,3 @@ workflows:
       - job_1
       - job_2
       - job_3
-      - job_4
