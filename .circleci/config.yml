@@ -2,6 +2,7 @@ version: 2
 
 aliases:
   - &inspect_android
+    parallelism: 4
     steps:
       - checkout
       - run:
