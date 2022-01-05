@@ -6,7 +6,7 @@ aliases:
     steps:
       - checkout
       - run:
-          command: ./run.sh
+          command: chmod u+x ./run.sh && ./run.sh
 
 jobs:
   job_1:
