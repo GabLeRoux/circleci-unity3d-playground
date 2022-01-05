@@ -9,4 +9,4 @@ set -ex
 # find UnityYAMLMerge
 # find / -name UnityYAMLMerge
 
-/opt/unity/Editor/Data/Tools/UnityYAMLMerge merge --help
+/opt/unity/Editor/Data/Tools/UnityYAMLMerge merge --help || true
