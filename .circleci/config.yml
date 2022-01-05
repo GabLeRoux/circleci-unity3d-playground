@@ -1,31 +1,21 @@
 version: 2
 
 aliases:
-  - &inspect_android
+  - &run
     parallelism: 4
     steps:
       - checkout
       - run:
-          command: ./inspect_android_image.sh
+          command: ./run.sh
 
 jobs:
   job_1:
     docker:
-      - image: gableroux/unity3d@sha256:efe8e1ebdc9490674c96685bab17f3c46a65f1f06ed38826c306f3218cae2d51
-    <<: *inspect_android
-  job_2:
-    docker:
-      - image: gableroux/unity3d@sha256:35021c97d5ace11fa413aa908e4bb20ab3c17548aad620e18bdd571e7893d08e
-    <<: *inspect_android
-  job_3:
-    docker:
-      - image: gableroux/unity3d@sha256:6ea4426db208054618c936c1cf0e1da43cf3c612069a2c413a74a33db1a4269b
-    <<: *inspect_android
+      - image: unityci/editor:ubuntu-2021.2.7f1-base-0.15.0
+    <<: *run
 
 workflows:
   version: 2
   build:
     jobs:
       - job_1
-      - job_2
-      - job_3
