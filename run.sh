@@ -7,4 +7,6 @@ set -ex
 # /opt/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/SDK/tools/bin/sdkmanager --version
 
 # find UnityYAMLMerge
-find / -name UnityYAMLMerge
+# find / -name UnityYAMLMerge
+
+/opt/unity/Editor/Data/Tools/UnityYAMLMerge --help
